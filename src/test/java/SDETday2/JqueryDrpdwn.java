@@ -26,5 +26,25 @@ public class JqueryDrpdwn {
                 options.click();
             }
         }
+
+//        2nd Way
+
+        for (WebElement element : ele){
+            if (!value[0].toLowerCase().contains("all")){
+                for (String input : value){
+                    if (element.getText().equals(input)){
+                        element.click();
+                    }
+                }
+            }
+            else {
+                element.click();
+            }
+        }
+
+
+
+
     }
+
 }
